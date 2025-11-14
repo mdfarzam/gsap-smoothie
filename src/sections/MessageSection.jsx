@@ -1,6 +1,26 @@
-import React from 'react'
+import { useGSAP } from "@gsap/react"
+import SplitText from "gsap/SplitText";
+
 
 const MessageSection = () => {
+
+    useGSAP( () => {
+
+        const firstMsgSplit = SplitText.create(".first-message", {
+            type: "words",
+        });
+
+        const SecondMsgSplit = SplitText.create(".second-message", {
+            type: "words",
+        });
+
+        const ParagraphSplit = SplitText.create(".message-content p", {
+            type: "words, lines",
+            linesClass: "paragraph-line",
+        });
+
+    } )
+
     return (
         <section className='message-content '>
             <div className='container mx-auto flex-center py-28 relative'>
@@ -17,6 +37,14 @@ const MessageSection = () => {
 
                         <h1 className='second-message '>YOUR FUTURE WITH EVERY GULP OF PERFECT PROTIEN</h1>
 
+                    </div>
+
+                    <div className="flex-center md:mt-20 mt-10">
+                        <div className="max-w-md px-10 flex-center overflow-hidden">
+                            <p>
+                                Rev up your reberl spirit and feed away the adventure of life with SPYLT, where you're one chug away from epic nostalgia and fearless fun.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
