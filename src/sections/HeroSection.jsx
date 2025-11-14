@@ -35,7 +35,7 @@ const HeroSection = () => {
                 trigger: ".hero-container",
                 start: "1% top",
                 end: "bottom top",
-                scrub: true,
+                scrub: true,    
             },
         });
         heroTl.to(".hero-container", {
